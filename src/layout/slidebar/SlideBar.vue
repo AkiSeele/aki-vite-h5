@@ -113,14 +113,16 @@ function closeMenu() {
 }
 function onRemove() {
   userStore.$reset();
-  router.go(-1);
+  setTimeout(() => {
+    router.go(0);
+  }, 200)
 }
 </script>
 
 <style lang="scss" scoped>
 .example-block {
   padding: 20px 24px;
-  width: 50vw;
+  width: 60vw;
   border-radius: 8px;
   color: var(--theme-colorA);
 }
