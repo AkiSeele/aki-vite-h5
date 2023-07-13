@@ -46,6 +46,7 @@ const darkTheme = {
   "--bottom-navigation-item-active-background-color": "#cccccc",
   "--popup-content-background-color": "#2c2c33",
   "--menu-background-color": "#2c2c33",
+  "--card-background": "#cccccc"
 };
 
 function toggleRootTheme() {

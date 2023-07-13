@@ -6,26 +6,30 @@
   </var-pull-refresh>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const refreshing = ref(false)
-const loading = ref(false)
-const list = ref<number[]>([])
+const refreshing = ref(false);
+const loading = ref(false);
+const list = ref<number[]>([]);
 
 function refresh() {
   setTimeout(() => {
-    console.log('refresh')
-    refreshing.value = false
-  }, 2000)
+    console.log("refresh");
+    refreshing.value = false;
+  }, 2000);
 }
 
 function load() {
   setTimeout(() => {
     for (let i = 0; i < 20; i++) {
-      list.value.push(list.value.length + 1)
+      list.value.push(list.value.length + 1);
     }
-    loading.value = false
-  }, 1000)
+    loading.value = false;
+  }, 1000);
 }
 </script>
-
+<style scoped lang="scss">
+.var-cell {
+  color: var(--theme-colorA);
+}
+</style>
